@@ -1,0 +1,23 @@
+type Query{
+    listerComptes:[Compte]
+    compteById(id : Float): Compte
+}
+
+type Mutation{
+    addCompte(compte:CompteRequestDTO):Compte
+
+}
+
+type Compte{
+    idCompte : Float,
+
+    solde : Float,
+
+    type : String,
+}
+
+input CompteRequestDTO{
+    solde : Float,
+
+    type : String,
+}
